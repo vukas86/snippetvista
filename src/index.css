@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular"),
+    url("../src/assets/fonts/Montserrat-Regular.ttf"), format("truetype");
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
 }
