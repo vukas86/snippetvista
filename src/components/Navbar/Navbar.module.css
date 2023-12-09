@@ -1,0 +1,8 @@
+.navGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.navGroup button {
+  margin-right: 20px;
+}
