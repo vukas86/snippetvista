@@ -1,5 +1,28 @@
 .searchContainer form {
   position: relative;
-  display: flex;
-  align-items: center;
+}
+
+.searchBox {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* .searchBtn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: -2px;
+  cursor: pointer;
+} */
+
+/* .searchBtn img {
+  width: 20px;
+} */
+
+.searchBox:focus {
+  border-color: #4285f4; /* YouTube blue color */
+  box-shadow: 0 0 8px rgba(66, 133, 244, 0.6);
 }
