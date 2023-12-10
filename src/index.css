@@ -16,7 +16,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  width: 100%;
-  padding: 30px 20px 0 20px;
+  /* width: 90%; */
+  padding: 20px;
   border-bottom: 1px solid gray;
 }

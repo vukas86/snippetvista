@@ -1,3 +1,5 @@
+import Search from "./Search";
+
 import hamburgerIcon from "../../assets/icons/burger/hamburger.png";
 import logo from "../../assets/logo/snilogo-removebg-preview.png";
 
@@ -14,7 +16,7 @@ function Navbar() {
         </div>
         <img src={logo} alt="logo" className={styles.logoImg} />
       </div>
-      <div>Search</div>
+      <Search />
       <div>Toggle</div>
     </nav>
   );
