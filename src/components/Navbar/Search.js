@@ -34,7 +34,7 @@ function Search() {
       filteredData: results,
     });
   };
-
+  console.log(state.filteredData);
   return (
     <div className={styles.searchContainer}>
       <form>
