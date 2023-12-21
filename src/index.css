@@ -22,6 +22,11 @@ body {
   --color-foreground: #1f2023;
 }
 
+body.dark {
+  --color-background: #1f2023;
+  --color-foreground: #efefef;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -32,6 +37,11 @@ nav {
   border-bottom: 1px solid gray;
   background-color: var(--color-background);
   color: var(--color-foreground);
+}
+
+.react-toggle-track-check {
+  height: 2px;
+  left: 0;
 }
 
 [data-theme="dark"] {
