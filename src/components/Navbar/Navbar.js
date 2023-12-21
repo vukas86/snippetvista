@@ -4,7 +4,7 @@ import hamburgerIcon from "../../assets/icons/burger/hamburger.png";
 import logo from "../../assets/logo/snilogo-removebg-preview.png";
 
 import styles from "./Navbar.module.css";
-import Toggle from "./Toggle";
+import DarkModeToggle from "./Toggle";
 
 function Navbar() {
   return (
@@ -18,7 +18,7 @@ function Navbar() {
         <img src={logo} alt="logo" className={styles.logoImg} />
       </div>
       <Search />
-      <Toggle />
+      <DarkModeToggle />
     </nav>
   );
 }

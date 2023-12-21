@@ -1,10 +1,10 @@
 :root {
-  --background-color: #f6f6f6;
-  --foreground-color: #003cff;
-  --primary-text-color: black;
-  --secondary-text-color: #ffffff;
+  --color-background: #fafafa;
+  --color-foreground: #1f2023;
+  /* --primary-text-color: black; */
+  /* --secondary-text-color: #ffffff;
   --toggle-bg: rgb(249, 249, 111);
-  --toggle-fg: rgb(148, 148, 4);
+  --toggle-fg: rgb(148, 148, 4); */
 }
 
 @font-face {
@@ -18,6 +18,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
+  --color-background: #fafafa;
+  --color-foreground: #1f2023;
 }
 
 nav {
@@ -28,6 +30,8 @@ nav {
   /* width: 90%; */
   padding: 20px;
   border-bottom: 1px solid gray;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
 [data-theme="dark"] {
@@ -36,4 +40,11 @@ nav {
   --primary-text-color: #f6d6f6;
   --toggle-bg: #283452;
   --toggle-fg: #1d53dc;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --color-background: #1f2023;
+    --color-foreground: #efefef;
+  }
 }
