@@ -4,28 +4,25 @@
   align-items: center;
 }
 
-.navGroup button {
-  width: 40px;
-  margin-right: 15px;
-}
-
 .logoImg {
   height: 70px;
+  margin-left: 20px;
 }
 
-.menuBtn {
-  border: none;
-  background-color: white;
-  cursor: pointer;
+.hamIcon {
+  transition: transform 0.3s ease; /* Add smooth transition for transform */
 }
 
-.menuBtn:hover {
+.hamIcon:hover {
   border-radius: 7px;
-  border: 1px solid grey;
+  box-shadow: 0 0 0 1px grey;
   background-color: rgb(202, 199, 199);
   padding: 3px;
+  cursor: pointer;
+  transform: scale(1.05);
+  margin: -3px;
 }
 
-.menuBtn:active {
+.hamIcon:active {
   background-color: rgb(142, 140, 140);
 }
