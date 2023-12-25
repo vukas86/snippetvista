@@ -1,0 +1,32 @@
+.sidecontainer {
+  width: 12%;
+  border-right: black 1px solid;
+  margin: 0;
+  padding: 8px;
+  height: 800px;
+}
+.barlinks span {
+  margin-left: 10px;
+}
+
+.barlinks ul {
+  padding: 0;
+}
+
+.barlinks li {
+  list-style-type: none;
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.barlinks li:hover {
+  background-color: rgb(177, 174, 174);
+  border-radius: 6px;
+}
+
+.barlinks a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
