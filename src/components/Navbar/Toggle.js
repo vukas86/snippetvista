@@ -1,11 +1,11 @@
-import { useDarkMode } from "../../store/DarkModeContext";
+import { useAppContext } from "../../store/AppContext";
 import Toggle from "react-toggle";
 
 import "react-toggle/style.css";
 import styles from "./Toggle.module.css";
 
 function DarkModeToggle() {
-  const { isDarkMode, setIsDarkMode } = useDarkMode();
+  const { isDarkMode, setIsDarkMode } = useAppContext();
 
   return (
     <Toggle

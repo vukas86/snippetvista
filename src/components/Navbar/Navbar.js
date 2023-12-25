@@ -1,5 +1,5 @@
 import Search from "./Search";
-import { useDarkMode } from "../../store/DarkModeContext";
+import { useAppContext } from "../../store/AppContext";
 
 import hamburgerIconBlack from "../../assets/icons/burger/ham-black.svg";
 import hamburgerIconWhite from "../../assets/icons/burger/ham-white.svg";
@@ -10,7 +10,8 @@ import styles from "./Navbar.module.css";
 import DarkModeToggle from "./Toggle";
 
 function Navbar() {
-  const { isDarkMode, setIsDarkMode } = useDarkMode();
+  const { isDarkMode, setIsDarkMode, isSidebarOpen, toggleSidebar } =
+    useAppContext();
   const logo = isDarkMode ? logoNoBg : logoBlack;
   const hamburgerIcon = isDarkMode ? hamburgerIconWhite : hamburgerIconBlack;
 
@@ -21,6 +22,7 @@ function Navbar() {
           src={hamburgerIcon}
           alt="ham-icon"
           className={styles.hamIcon}
+          onClick={toggleSidebar}
         ></img>
         <img src={logo} alt="logo" className={styles.logoImg} />
       </div>

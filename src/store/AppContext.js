@@ -1,10 +1,11 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { useMediaQuery } from "react-responsive";
 
-export const DarkModeContext = createContext();
+export const AppContext = createContext();
 
-export const DarkModeProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
   const systemPrefersDark = useMediaQuery(
     {
@@ -22,17 +23,23 @@ export const DarkModeProvider = ({ children }) => {
     }
   }, [isDarkMode]);
 
+  const toggleSideBar = () => {
+    setIsSideBarOpen(!isSideBarOpen);
+  };
+
   return (
-    <DarkModeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
+    <AppContext.Provider
+      value={{ isDarkMode, setIsDarkMode, isSideBarOpen, setIsSideBarOpen }}
+    >
       {children}
-    </DarkModeContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useDarkMode = () => {
-  const context = useContext(DarkModeContext);
+export const useAppContext = () => {
+  const context = useContext(AppContext);
   if (!context) {
-    throw new Error("useDarkMode must be used within a DarkModeProvider");
+    throw new Error("useAppContext must be used within a AppProvider");
   }
   return context;
 };
