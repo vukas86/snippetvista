@@ -23,10 +23,6 @@ export const AppProvider = ({ children }) => {
     }
   }, [isDarkMode]);
 
-  const toggleSideBar = () => {
-    setIsSideBarOpen((prev) => !prev);
-  };
-
   return (
     <AppContext.Provider
       value={{
@@ -34,7 +30,6 @@ export const AppProvider = ({ children }) => {
         setIsDarkMode,
         isSideBarOpen,
         setIsSideBarOpen,
-        toggleSideBar,
       }}
     >
       {children}

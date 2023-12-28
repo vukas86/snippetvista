@@ -9,13 +9,13 @@ import arrayBlack from "../../assets/icons/square/bx-bracket.png";
 import arrayWhite from "../../assets/icons/square/bx-bracket (1).png";
 
 function SideBar() {
-  const { isDarkMode, setIsDarkMode, isSidebarOpen, toggleSidebar } =
+  const { isDarkMode, setIsDarkMode, isSideBarOpen, toggleSidebar } =
     useAppContext();
   const home = isDarkMode ? homeWhite : homeBlack;
   const object = isDarkMode ? objectWhite : objectBlack;
   const array = isDarkMode ? arrayWhite : arrayBlack;
 
-  if (isSidebarOpen) {
+  if (isSideBarOpen) {
     return null;
   }
 
