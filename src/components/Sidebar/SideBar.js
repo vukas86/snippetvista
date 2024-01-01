@@ -1,4 +1,5 @@
 import { useAppContext } from "../../store/AppContext";
+import { motion } from "framer-motion";
 import style from "./SideBar.module.css";
 
 import homeBlack from "../../assets/icons/home/home-outline.png";
@@ -11,39 +12,72 @@ import arrayWhite from "../../assets/icons/square/bx-bracket (1).png";
 function SideBar() {
   const { isDarkMode, setIsDarkMode, isSideBarOpen, toggleSidebar } =
     useAppContext();
+
   const home = isDarkMode ? homeWhite : homeBlack;
   const object = isDarkMode ? objectWhite : objectBlack;
   const array = isDarkMode ? arrayWhite : arrayBlack;
+
+  const sideBarVarients = {
+    closed: {
+      transition: {
+        staggerChildren: 0.2,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        staggerChildren: 0.2,
+        staggerDirection: 1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    closed: {
+      opacity: 0,
+    },
+    open: { opacity: 1 },
+  };
 
   if (isSideBarOpen) {
     return null;
   }
 
   return (
-    <section className="sidecontainer">
-      <div className={style.barlinks}>
+    <motion.aside
+      className="sidecontainer"
+      initial={{ width: 0 }}
+      animate={{ width: 200 }}
+      transition={{ type: "tween", duration: 0.5 }}
+    >
+      <motion.div
+        className={style.barlinks}
+        initial="closed"
+        animate="open"
+        variants={sideBarVarients}
+      >
         <ul>
-          <li>
+          <motion.li variants={itemVariants}>
             <a href="exmple.com">
               <img src={home} alt="home-icon"></img>
               <span>Home</span>
             </a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={itemVariants}>
             <a href="exmple.com">
               <img src={object} alt="object-icon"></img>
               <span>Objects</span>
             </a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={itemVariants}>
             <a href="exmple.com">
               <img src={array} alt="array-icon"></img>
               <span>Arrays</span>
             </a>
-          </li>
+          </motion.li>
         </ul>
-      </div>
-    </section>
+      </motion.div>
+    </motion.aside>
   );
 }
 

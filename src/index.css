@@ -66,6 +66,37 @@ nav {
   --toggle-fg: #1d53dc;
 }
 
+.slide-right {
+  -webkit-animation: slide-right 5s ease-in forwards;
+  animation: slide-right 5s ease-in forwards;
+}
+
+.slide-left {
+  -webkit-animation: slide-left 1s both;
+  animation: slide-left 1s both;
+}
+/* @keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+} */
+
 @media (prefers-color-scheme: dark) {
   body {
     --color-background: #1f2023;
