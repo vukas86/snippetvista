@@ -40,7 +40,14 @@ nav {
   color: var(--color-foreground);
 }
 
+li {
+  list-style-type: none;
+}
+
 .sidecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 12%;
   border-right: black 1px solid;
   margin: 0;
@@ -74,6 +81,18 @@ nav {
 .slide-left {
   -webkit-animation: slide-left 1s both;
   animation: slide-left 1s both;
+}
+
+.socialLinks ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.socialLinks li:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
 }
 /* @keyframes slide-right {
   0% {

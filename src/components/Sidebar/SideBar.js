@@ -8,6 +8,10 @@ import objectBlack from "../../assets/icons/curly/brackets-curly.png";
 import objectWhite from "../../assets/icons/curly/brackets-curly (1).png";
 import arrayBlack from "../../assets/icons/square/bx-bracket.png";
 import arrayWhite from "../../assets/icons/square/bx-bracket (1).png";
+import githubBlack from "../../assets/icons/social/github.svg";
+import githubWhite from "../../assets/icons/social/github (1).svg";
+import linkendinBlack from "../../assets/icons/social/linkedin.svg";
+import linkendinWhite from "../../assets/icons/social/linkedin (1).svg";
 
 function SideBar() {
   const { isDarkMode, setIsDarkMode, isSideBarOpen, toggleSidebar } =
@@ -16,6 +20,8 @@ function SideBar() {
   const home = isDarkMode ? homeWhite : homeBlack;
   const object = isDarkMode ? objectWhite : objectBlack;
   const array = isDarkMode ? arrayWhite : arrayBlack;
+  const github = isDarkMode ? githubWhite : githubBlack;
+  const linkedin = isDarkMode ? linkendinWhite : linkendinBlack;
 
   const sideBarVarients = {
     closed: {
@@ -77,6 +83,28 @@ function SideBar() {
           </motion.li>
         </ul>
       </motion.div>
+      <div className="socialLinks">
+        <ul>
+          <li>
+            <a
+              href="https://github.com/vukas86"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={github} alt="github-icon"></img>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/aleksandar-vukasovic/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={linkedin} alt="linkndin-icon"></img>
+            </a>
+          </li>
+        </ul>
+      </div>
     </motion.aside>
   );
 }

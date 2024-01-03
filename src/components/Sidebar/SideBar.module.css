@@ -7,7 +7,7 @@
 }
 
 .barlinks li {
-  list-style-type: none;
+  transition: background-color 0.3s;
   margin-top: 30px;
   padding: 15px;
 }
