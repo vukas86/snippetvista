@@ -21,6 +21,11 @@ body {
   --color-background: #fafafa;
   --color-foreground: #1f2023;
 }
+body,
+html {
+  overflow-y: hidden; /* This will prevent scrolling for the entire app */
+  height: 100%; /* Ensure the height takes the full viewport height */
+}
 
 body.dark {
   --color-background: #1f2023;
@@ -50,16 +55,17 @@ li {
 
 .sidecontainer {
   position: fixed;
+  top: 101px;
+  left: 0;
   display: flex;
   z-index: 1000;
   flex-direction: column;
   justify-content: space-between;
   width: 12%;
-  border-right: black 1px solid;
+  border-right: var(--color-foreground) 1px solid;
   margin: 0;
   padding: 8px;
-  height: 800px;
-
+  height: 100vh;
   background-color: var(--color-background);
 }
 
@@ -103,26 +109,30 @@ li {
 }
 
 .main-section {
+  z-index: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  /* justify-content: center; */
+  height: 80vh;
   background-color: var(--color-background);
+  overflow-y: auto;
 }
 
 .content-container {
+  top: 60px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   width: 800px;
   display: flex;
-  height: 400px;
+  min-height: 300px;
   border: 2px solid black;
   border-radius: 5px;
-  padding: 3px;
+  padding: 13px;
   background-color: #002240;
   color: white;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .content-container h3 {
@@ -162,27 +172,6 @@ article {
   background-color: blue;
   margin-right: var(--circle-marRight);
 }
-/* @keyframes slide-right {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    opacity: 1;
-  }
-} */
 
 @media (prefers-color-scheme: dark) {
   body {

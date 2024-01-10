@@ -30,6 +30,33 @@ function Main() {
           <code>{code}</code>
         </article>
       </div>
+      <div className="content-container">
+        <span className="col-1"></span>
+        <span className="col-2"></span>
+        <span className="col-3"></span>
+        <article>
+          <h3>Find the Largest Number in an Array</h3>
+          <code>{code}</code>
+        </article>
+      </div>
+      <div className="content-container">
+        <span className="col-1"></span>
+        <span className="col-2"></span>
+        <span className="col-3"></span>
+        <article>
+          <h3>Find the Largest Number in an Array</h3>
+          <code>{code}</code>
+        </article>
+      </div>
+      <div className="content-container">
+        <span className="col-1"></span>
+        <span className="col-2"></span>
+        <span className="col-3"></span>
+        <article>
+          <h3>Find the Largest Number in an Array</h3>
+          <code>{code}</code>
+        </article>
+      </div>
     </section>
   );
 }
