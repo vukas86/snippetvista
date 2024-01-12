@@ -1,0 +1,45 @@
+{
+  "Arrays": [
+    {
+      "id": "a1",
+      "title": "Find the Largest Number in an Array",
+      "description": "function findMaxNumber(arr) { let max = arr[0]; for (let i = 1; i < arr.length; i++) { if (arr[i] > max) { max = arr[i]; } } return max; }"
+    },
+    {
+      "id": "a2",
+      "title": "Removing duplicats from an Array",
+      "description": "let wizards = ['Merlin','Ursula','Gandalf','Merlin','Morgana,'Radagast',  'Ursula']; let deduped = Array.from(new Set(wizards));"
+    }
+  ],
+  "Objects": [
+    {
+      "id": "o1",
+      "title": "Converting an object into a query string",
+      "description": "let merlin = {job: 'Wizard',tool: 'Wand', age: 142,signatureSpell 'Dancing Teacups'};let queryString = new URLSearchParams(merlin).toString();"
+    }
+  ],
+  "Strings": [
+    {
+      "id": "s1",
+      "title": "Check if a String is a Palindrome",
+      "description": "function isPalindrome(str) { const reversed = str.split('').reverse().join(''); return str === reversed; }"
+    }
+  ],
+  "Utillities": [
+    {
+      "id": "u1",
+      "title": "Generating Random IDs",
+      "description": "let id = crypto.randomUUID();"
+    },
+    {
+      "id": "u2",
+      "title": "Numeric separators",
+      "description": "let num = 1_234_567_890_987_654_321;"
+    },
+    {
+      "id": "u3",
+      "title": "Numeric separators ",
+      "description": "let num = 1_234_567_890_987_654_321;"
+    }
+  ]
+}
