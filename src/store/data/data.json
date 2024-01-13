@@ -9,6 +9,11 @@
       "id": "a2",
       "title": "Removing duplicats from an Array",
       "description": "let wizards = ['Merlin','Ursula','Gandalf','Merlin','Morgana,'Radagast',  'Ursula']; let deduped = Array.from(new Set(wizards));"
+    },
+    {
+      "id": "a3",
+      "title": "Sorting an Array",
+      "description": "const arr = [44, 81, 23, 2, 64, 25, 100]; const sortArr = arr.sort((a, b) => b - a); console.log(sortArr);"
     }
   ],
   "Objects": [
@@ -23,9 +28,14 @@
       "id": "s1",
       "title": "Check if a String is a Palindrome",
       "description": "function isPalindrome(str) { const reversed = str.split('').reverse().join(''); return str === reversed; }"
+    },
+    {
+      "id": "s2",
+      "title": "Reverse characters in a string",
+      "description": "const word = 'Nipuni'; const reversedWord = [...word].reverse().join(''); console.log(reversedWord); // 'inupiN'"
     }
   ],
-  "Utillities": [
+  "Utilities": [
     {
       "id": "u1",
       "title": "Generating Random IDs",
@@ -33,13 +43,13 @@
     },
     {
       "id": "u2",
-      "title": "Numeric separators",
+      "title": "Numeric Separators",
       "description": "let num = 1_234_567_890_987_654_321;"
     },
     {
       "id": "u3",
-      "title": "Numeric separators ",
-      "description": "let num = 1_234_567_890_987_654_321;"
+      "title": "Mask Numbers",
+      "description": "const fullNum = '8937498274283749328474983742'; const last8Dgtls = fullNum.slice(-8); const maskedNum = last8Dgtls.padStart(fullNum.length, '*') console.log(maskedNum);"
     }
   ]
 }

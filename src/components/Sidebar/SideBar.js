@@ -12,6 +12,10 @@ import githubBlack from "../../assets/icons/social/github.svg";
 import githubWhite from "../../assets/icons/social/github (1).svg";
 import linkendinBlack from "../../assets/icons/social/linkedin.svg";
 import linkendinWhite from "../../assets/icons/social/linkedin (1).svg";
+import quoteBlack from "../../assets/icons/quotes/quote_left_black.svg";
+import quoteWhite from "../../assets/icons/quotes/quote_left_white.svg";
+import utilWhite from "../../assets/icons/aid/fak_white.svg";
+import utilBlack from "../../assets/icons/aid/fak_black.svg";
 
 function SideBar() {
   const { isDarkMode, setIsDarkMode, isSideBarOpen, toggleSidebar } =
@@ -22,6 +26,8 @@ function SideBar() {
   const array = isDarkMode ? arrayWhite : arrayBlack;
   const github = isDarkMode ? githubWhite : githubBlack;
   const linkedin = isDarkMode ? linkendinWhite : linkendinBlack;
+  const quotes = isDarkMode ? quoteWhite : quoteBlack;
+  const utility = isDarkMode ? utilWhite : utilBlack;
 
   const sideBarVarients = {
     closed: {
@@ -79,6 +85,18 @@ function SideBar() {
             <a href="exmple.com">
               <img src={array} alt="array-icon"></img>
               <span>Arrays</span>
+            </a>
+          </motion.li>
+          <motion.li variants={itemVariants}>
+            <a href="exmple.com">
+              <img src={quotes} alt="string-icon"></img>
+              <span>Strings</span>
+            </a>
+          </motion.li>
+          <motion.li variants={itemVariants}>
+            <a href="exmple.com">
+              <img src={utility} alt="string-icon"></img>
+              <span>Utilities</span>
             </a>
           </motion.li>
         </ul>
