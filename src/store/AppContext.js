@@ -6,6 +6,7 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+  const [dataObject, setDataObject] = useState([]);
 
   const systemPrefersDark = useMediaQuery(
     {
@@ -23,6 +24,20 @@ export const AppProvider = ({ children }) => {
     }
   }, [isDarkMode]);
 
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/data.json");
+      const data = await response.json();
+      setDataObject(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <AppContext.Provider
       value={{
@@ -30,6 +45,7 @@ export const AppProvider = ({ children }) => {
         setIsDarkMode,
         isSideBarOpen,
         setIsSideBarOpen,
+        dataObject,
       }}
     >
       {children}

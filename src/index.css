@@ -151,6 +151,12 @@ article {
   margin-left: 200px;
 }
 
+.main-dots {
+  display: flex;
+  flex-direction: row;
+  width: 80px;
+}
+
 .col-1 {
   width: var(--circle-width);
   height: var(--circle-height);
