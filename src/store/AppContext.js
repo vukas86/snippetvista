@@ -7,6 +7,8 @@ export const AppProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [dataObject, setDataObject] = useState([]);
+  const [dataArray, setDataArray] = useState([]);
+  const [selectedSection, setSelectedSection] = useState("");
 
   const systemPrefersDark = useMediaQuery(
     {
@@ -38,6 +40,16 @@ export const AppProvider = ({ children }) => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (dataObject.hasOwnProperty(selectedSection) || selectedSection !== "") {
+      setDataArray(dataObject[selectedSection]);
+    } else if (selectedSection === "") {
+      const allValues = Object.values(dataObject).flat();
+      setDataArray(allValues);
+    }
+  }, [dataObject, selectedSection]);
+  console.log(dataArray);
+
   return (
     <AppContext.Provider
       value={{
@@ -45,7 +57,9 @@ export const AppProvider = ({ children }) => {
         setIsDarkMode,
         isSideBarOpen,
         setIsSideBarOpen,
-        dataObject,
+        dataArray,
+        selectedSection,
+        setSelectedSection,
       }}
     >
       {children}

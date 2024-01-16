@@ -18,9 +18,18 @@ import utilWhite from "../../assets/icons/aid/fak_white.svg";
 import utilBlack from "../../assets/icons/aid/fak_black.svg";
 
 function SideBar() {
-  const { isDarkMode, setIsDarkMode, isSideBarOpen, toggleSidebar } =
-    useAppContext();
+  const {
+    isDarkMode,
+    setIsDarkMode,
+    isSideBarOpen,
+    toggleSidebar,
+    selectedSection,
+    setSelectedSection,
+  } = useAppContext();
 
+  const selectionHandler = (section) => {
+    setSelectedSection(section);
+  };
   const home = isDarkMode ? homeWhite : homeBlack;
   const object = isDarkMode ? objectWhite : objectBlack;
   const array = isDarkMode ? arrayWhite : arrayBlack;
@@ -70,31 +79,31 @@ function SideBar() {
       >
         <ul>
           <motion.li variants={itemVariants}>
-            <a href="exmple.com">
+            <a href="#home" onClick={() => selectionHandler("")}>
               <img src={home} alt="home-icon"></img>
               <span>Home</span>
             </a>
           </motion.li>
           <motion.li variants={itemVariants}>
-            <a href="exmple.com">
+            <a href="#objects" onClick={() => selectionHandler("Objects")}>
               <img src={object} alt="object-icon"></img>
               <span>Objects</span>
             </a>
           </motion.li>
           <motion.li variants={itemVariants}>
-            <a href="exmple.com">
+            <a href="#arrays" onClick={() => selectionHandler("Arrays")}>
               <img src={array} alt="array-icon"></img>
               <span>Arrays</span>
             </a>
           </motion.li>
           <motion.li variants={itemVariants}>
-            <a href="exmple.com">
+            <a href="#strings" onClick={() => selectionHandler("Strings")}>
               <img src={quotes} alt="string-icon"></img>
               <span>Strings</span>
             </a>
           </motion.li>
           <motion.li variants={itemVariants}>
-            <a href="exmple.com">
+            <a href="#utilities" onClick={() => selectionHandler("Utilities")}>
               <img src={utility} alt="string-icon"></img>
               <span>Utilities</span>
             </a>
