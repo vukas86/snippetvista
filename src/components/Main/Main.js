@@ -16,7 +16,7 @@ function Main() {
           </div>
           <article>
             <h3>{item.title}</h3>
-            <code>{item.description}</code>
+            <p>{item.description}</p>
           </article>
         </div>
       ))}

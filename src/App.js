@@ -15,8 +15,8 @@ function App() {
         <div>
           <Main />
         </div>
-        <Footer />
       </div>
+      {/* <Footer /> */}
     </AppProvider>
   );
 }

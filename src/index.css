@@ -20,6 +20,11 @@ body {
   font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
   --color-background: #fafafa;
   --color-foreground: #1f2023;
+  --sb-track-color: #5a6a71;
+  --sb-thumb-color: #002240;
+  --sb-size: 20px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
 }
 body,
 html {
@@ -31,6 +36,28 @@ body.dark {
   --color-background: #1f2023;
   --color-foreground: #efefef;
   --visible: hidden;
+}
+
+.main-section {
+  --sb-track-color: #5a6a71;
+  --sb-thumb-color: #002240;
+  --sb-size: 20px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+.main-section::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.main-section::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 19px;
+}
+
+.main-section::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 19px;
 }
 
 .app {
@@ -95,6 +122,10 @@ li {
   -webkit-animation: slide-left 1s both;
   animation: slide-left 1s both;
 }
+.active {
+  view-transition-name: activeTab;
+  background-color: rgb(177, 174, 174);
+}
 
 .socialLinks ul {
   display: flex;
@@ -139,12 +170,14 @@ li {
   color: yellow;
 }
 
-code {
+p {
   font-size: 24px;
+  max-width: 75ch;
+  text-wrap: pretty;
 }
 
 article {
-  margin-top: 25px;
+  margin-top: 18px;
 }
 
 .sidebar-open .content-container {

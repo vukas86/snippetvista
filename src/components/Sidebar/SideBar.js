@@ -64,6 +64,8 @@ function SideBar() {
     return null;
   }
 
+  console.log(selectedSection);
+
   return (
     <motion.aside
       className="sidecontainer"
@@ -78,31 +80,46 @@ function SideBar() {
         variants={sideBarVarients}
       >
         <ul>
-          <motion.li variants={itemVariants}>
+          <motion.li
+            variants={itemVariants}
+            className={selectedSection === "" ? "active" : ""}
+          >
             <a href="#home" onClick={() => selectionHandler("")}>
               <img src={home} alt="home-icon"></img>
               <span>Home</span>
             </a>
           </motion.li>
-          <motion.li variants={itemVariants}>
+          <motion.li
+            variants={itemVariants}
+            className={selectedSection === "Objects" ? "active" : ""}
+          >
             <a href="#objects" onClick={() => selectionHandler("Objects")}>
               <img src={object} alt="object-icon"></img>
               <span>Objects</span>
             </a>
           </motion.li>
-          <motion.li variants={itemVariants}>
+          <motion.li
+            variants={itemVariants}
+            className={selectedSection === "Arrays" ? "active" : ""}
+          >
             <a href="#arrays" onClick={() => selectionHandler("Arrays")}>
               <img src={array} alt="array-icon"></img>
               <span>Arrays</span>
             </a>
           </motion.li>
-          <motion.li variants={itemVariants}>
+          <motion.li
+            variants={itemVariants}
+            className={selectedSection === "Strings" ? "active" : ""}
+          >
             <a href="#strings" onClick={() => selectionHandler("Strings")}>
               <img src={quotes} alt="string-icon"></img>
               <span>Strings</span>
             </a>
           </motion.li>
-          <motion.li variants={itemVariants}>
+          <motion.li
+            variants={itemVariants}
+            className={selectedSection === "Utilities" ? "active" : ""}
+          >
             <a href="#utilities" onClick={() => selectionHandler("Utilities")}>
               <img src={utility} alt="string-icon"></img>
               <span>Utilities</span>
