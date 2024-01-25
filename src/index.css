@@ -127,16 +127,21 @@ li {
   background-color: rgb(177, 174, 174);
 }
 
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 300%;
+}
+
 .socialLinks ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: 50px;
 }
 
-.socialLinks li:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.5em;
+.socialLinks a {
+  margin-right: 20px;
 }
 
 .main-section {
@@ -144,7 +149,7 @@ li {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  height: 80vh;
+  height: 100vh;
   background-color: var(--color-background);
   overflow-y: auto;
 }
@@ -212,6 +217,11 @@ article {
   margin-right: var(--circle-marRight);
 }
 
+[socialLinks] {
+  inset: unset;
+  bottom: anchor(top);
+  left: anchor(center);
+}
 @media (prefers-color-scheme: dark) {
   body {
     --color-background: #1f2023;

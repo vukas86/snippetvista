@@ -1,39 +1,21 @@
-// import searchIcon from "../../assets/icons/search/search-outline.png";
-import { useState, useEffect } from "react";
+import { useAppContext } from "../../store/AppContext";
 
 import styles from "./Search.module.css";
 
 function Search() {
-  const data = [
-    {
-      url: "",
-      tags: ["react", "blog"],
-      title: "How to create a react search bar",
-    },
-    {
-      url: "",
-      tags: ["node", "express"],
-      title: "How to mock api data in Node",
-    },
-  ];
-
-  const [state, setstate] = useState({
-    query: "",
-    filteredData: [],
-  });
+  const { dataArray, searchResult, setSearchResult } = useAppContext();
 
   const searchHandler = (e) => {
-    // setQuery(e.target.value);
-
-    const results = data.filter((item) => {
-      if (e.target.value === "") return data;
+    const results = dataArray.filter((item) => {
+      if (e.target.value === "") return dataArray;
       return item.title.toLowerCase().includes(e.target.value.toLowerCase());
     });
-    setstate({
+    setSearchResult({
       query: e.target.value,
       filteredData: results,
     });
   };
+  console.log(searchResult);
 
   return (
     <div className={styles.searchContainer}>
@@ -42,12 +24,9 @@ function Search() {
           type="search"
           className={styles.searchBox}
           placeholder="Search"
-          value={state.query}
+          value={searchResult.query}
           onChange={searchHandler}
         />
-        {/* <button onClick={searchEvent} className={styles.searchBtn}>
-          <img src={searchIcon} alt="search-icon" />
-        </button> */}
       </form>
     </div>
   );

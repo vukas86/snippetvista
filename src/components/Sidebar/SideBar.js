@@ -78,6 +78,7 @@ function SideBar() {
         initial="closed"
         animate="open"
         variants={sideBarVarients}
+        id="list-items"
       >
         <ul>
           <motion.li

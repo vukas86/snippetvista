@@ -9,6 +9,10 @@ export const AppProvider = ({ children }) => {
   const [dataObject, setDataObject] = useState([]);
   const [dataArray, setDataArray] = useState([]);
   const [selectedSection, setSelectedSection] = useState("");
+  const [searchResult, setSearchResult] = useState({
+    query: "",
+    filteredData: [],
+  });
 
   const systemPrefersDark = useMediaQuery(
     {
@@ -60,6 +64,8 @@ export const AppProvider = ({ children }) => {
         dataArray,
         selectedSection,
         setSelectedSection,
+        searchResult,
+        setSearchResult,
       }}
     >
       {children}
