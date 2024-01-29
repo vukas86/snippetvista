@@ -1,25 +1,39 @@
 import { useAppContext } from "../../store/AppContext";
 
 function Main() {
-  const { dataArray } = useAppContext();
-
-  // let filteredArray = Array.from(new Set(dataArray));
+  const { dataArray, searchResult } = useAppContext();
+  console.log(dataArray, searchResult.query, searchResult.filteredData.length);
+  const data = searchResult.filteredData;
 
   return (
     <section className="main-section">
-      {dataArray.map((item) => (
-        <div key={item.id} className="content-container">
-          <div className="main-dots">
-            <span className="col-1"></span>
-            <span className="col-2"></span>
-            <span className="col-3"></span>
-          </div>
-          <article>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </article>
-        </div>
-      ))}
+      {searchResult.query !== "" && data.length !== 0
+        ? data.map((item) => (
+            <div key={item.id} className="content-container">
+              <div className="main-dots">
+                <span className="col-1"></span>
+                <span className="col-2"></span>
+                <span className="col-3"></span>
+              </div>
+              <article>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            </div>
+          ))
+        : dataArray.map((item) => (
+            <div key={item.id} className="content-container">
+              <div className="main-dots">
+                <span className="col-1"></span>
+                <span className="col-2"></span>
+                <span className="col-3"></span>
+              </div>
+              <article>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            </div>
+          ))}
     </section>
   );
 }

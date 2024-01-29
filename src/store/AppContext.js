@@ -47,12 +47,19 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     if (dataObject.hasOwnProperty(selectedSection) || selectedSection !== "") {
       setDataArray(dataObject[selectedSection]);
+      setSearchResult((prevResult) => ({
+        ...prevResult,
+        filteredData: dataObject[selectedSection],
+      }));
     } else if (selectedSection === "") {
       const allValues = Object.values(dataObject).flat();
       setDataArray(allValues);
+      setSearchResult((prevResult) => ({
+        ...prevResult,
+        filteredData: allValues,
+      }));
     }
   }, [dataObject, selectedSection]);
-  console.log(dataArray);
 
   return (
     <AppContext.Provider

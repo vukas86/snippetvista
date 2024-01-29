@@ -15,7 +15,6 @@ function Search() {
       filteredData: results,
     });
   };
-  console.log(searchResult);
 
   return (
     <div className={styles.searchContainer}>
