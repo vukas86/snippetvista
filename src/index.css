@@ -217,6 +217,10 @@ article {
   margin-right: var(--circle-marRight);
 }
 
+.description {
+  white-space: pre-line;
+}
+
 [socialLinks] {
   inset: unset;
   bottom: anchor(top);

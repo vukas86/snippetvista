@@ -3,12 +3,12 @@
     {
       "id": "a1",
       "title": "Find the Largest Number in an Array",
-      "description": "function findMaxNumber(arr) { let max = arr[0]; for (let i = 1; i < arr.length; i++) { if (arr[i] > max) { max = arr[i]; } } return max; }"
+      "description": "function findMaxNumber(arr) { let max = arr[0]; \nfor (let i = 1; i < arr.length; i++) { if (arr[i] > max) { max = arr[i]; } } \nreturn max; }"
     },
     {
       "id": "a2",
       "title": "Removing duplicats from an Array",
-      "description": "let wizards = ['Merlin','Ursula','Gandalf','Merlin','Morgana,'Radagast',  'Ursula']; let deduped = Array.from(new Set(wizards));"
+      "description": "let wizards = ['Merlin','Ursula','Gandalf','Merlin','Morgana,'Radagast',  'Ursula']; \\nlet deduped = Array.from(new Set(wizards));"
     },
     {
       "id": "a3",
@@ -27,7 +27,7 @@
     {
       "id": "s1",
       "title": "Check if a String is a Palindrome",
-      "description": "function isPalindrome(str) { const reversed = str.split('').reverse().join(''); return str === reversed; }"
+      "description": "function isPalindrome(str) { const reversed = str.split('').reverse().join(''); <br/> return str === reversed; }"
     },
     {
       "id": "s2",

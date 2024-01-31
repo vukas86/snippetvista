@@ -33,7 +33,16 @@ export const AppProvider = ({ children }) => {
   const fetchData = async () => {
     try {
       const response = await fetch("http://localhost:3000/data.json");
-      const data = await response.json();
+      let data = await response.json();
+
+      for (let category in data) {
+        data[category] = data[category].map((item) => {
+          item.description = item.description.replace(/\\n/g, "<br/>");
+          return item;
+        });
+      }
+      console.log(data);
+
       setDataObject(data);
     } catch (error) {
       console.error("Error fetching data:", error);

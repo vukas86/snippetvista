@@ -17,7 +17,7 @@ function Main() {
               </div>
               <article>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: item.description }} />
               </article>
             </div>
           ))
@@ -30,7 +30,7 @@ function Main() {
               </div>
               <article>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: item.description }} />
               </article>
             </div>
           ))}
