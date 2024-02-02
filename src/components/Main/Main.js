@@ -7,33 +7,35 @@ function Main() {
 
   return (
     <section className="main-section">
-      {searchResult.query !== "" && data.length !== 0
-        ? data.map((item) => (
-            <div key={item.id} className="content-container">
-              <div className="main-dots">
-                <span className="col-1"></span>
-                <span className="col-2"></span>
-                <span className="col-3"></span>
+      <div className="main-content">
+        {searchResult.query !== "" && data.length !== 0
+          ? data.map((item) => (
+              <div key={item.id} className="content-container">
+                <div className="main-dots">
+                  <span className="col-1"></span>
+                  <span className="col-2"></span>
+                  <span className="col-3"></span>
+                </div>
+                <article>
+                  <h3>{item.title}</h3>
+                  <p dangerouslySetInnerHTML={{ __html: item.description }} />
+                </article>
               </div>
-              <article>
-                <h3>{item.title}</h3>
-                <p dangerouslySetInnerHTML={{ __html: item.description }} />
-              </article>
-            </div>
-          ))
-        : dataArray.map((item) => (
-            <div key={item.id} className="content-container">
-              <div className="main-dots">
-                <span className="col-1"></span>
-                <span className="col-2"></span>
-                <span className="col-3"></span>
+            ))
+          : dataArray.map((item) => (
+              <div key={item.id} className="content-container">
+                <div className="main-dots">
+                  <span className="col-1"></span>
+                  <span className="col-2"></span>
+                  <span className="col-3"></span>
+                </div>
+                <article>
+                  <h3>{item.title}</h3>
+                  <p dangerouslySetInnerHTML={{ __html: item.description }} />
+                </article>
               </div>
-              <article>
-                <h3>{item.title}</h3>
-                <p dangerouslySetInnerHTML={{ __html: item.description }} />
-              </article>
-            </div>
-          ))}
+            ))}
+      </div>
     </section>
   );
 }

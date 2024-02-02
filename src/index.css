@@ -232,3 +232,21 @@ article {
     --color-foreground: #efefef;
   }
 }
+
+@media only screen and (max-width: 550px),
+  only screen and (max-device-width: 550px) {
+  .main-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 200px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
