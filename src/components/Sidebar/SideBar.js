@@ -94,37 +94,49 @@ function SideBar() {
             variants={itemVariants}
             className={selectedSection === "Objects" ? "active" : ""}
           >
-            <a href="#objects" onClick={() => selectionHandler("Objects")}>
+            <button
+              onClick={() => selectionHandler("Objects")}
+              className={style.btn}
+            >
               <img src={object} alt="object-icon"></img>
               <span>Objects</span>
-            </a>
+            </button>
           </motion.li>
           <motion.li
             variants={itemVariants}
             className={selectedSection === "Arrays" ? "active" : ""}
           >
-            <a href="#arrays" onClick={() => selectionHandler("Arrays")}>
+            <button
+              onClick={() => selectionHandler("Arrays")}
+              className={style.btn}
+            >
               <img src={array} alt="array-icon"></img>
               <span>Arrays</span>
-            </a>
+            </button>
           </motion.li>
           <motion.li
             variants={itemVariants}
             className={selectedSection === "Strings" ? "active" : ""}
           >
-            <a href="#strings" onClick={() => selectionHandler("Strings")}>
+            <button
+              onClick={() => selectionHandler("Strings")}
+              className={style.btn}
+            >
               <img src={quotes} alt="string-icon"></img>
               <span>Strings</span>
-            </a>
+            </button>
           </motion.li>
           <motion.li
             variants={itemVariants}
             className={selectedSection === "Utilities" ? "active" : ""}
           >
-            <a href="#utilities" onClick={() => selectionHandler("Utilities")}>
+            <button
+              onClick={() => selectionHandler("Utilities")}
+              className={style.btn}
+            >
               <img src={utility} alt="string-icon"></img>
               <span>Utilities</span>
-            </a>
+            </button>
           </motion.li>
         </ul>
       </motion.div>

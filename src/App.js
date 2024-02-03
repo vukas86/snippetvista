@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar/Navbar";
 import "./index.css";
 import SideBar from "./components/Sidebar/SideBar";
 import Main from "./components/Main/Main";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
           <Main />
         </div>
       </div>
-      {/* <Footer /> */}
     </AppProvider>
   );
 }

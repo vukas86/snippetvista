@@ -20,14 +20,14 @@
     {
       "id": "o1",
       "title": "Converting an object into a query string",
-      "description": "let merlin = {job: 'Wizard',tool: 'Wand', age: 142,signatureSpell 'Dancing Teacups'};let queryString = new URLSearchParams(merlin).toString();"
+      "description": "let merlin = {job: 'Wizard',tool: 'Wand', age: 142,signatureSpell 'Dancing Teacups'};\nlet queryString = new URLSearchParams(merlin).toString();"
     }
   ],
   "Strings": [
     {
       "id": "s1",
       "title": "Check if a String is a Palindrome",
-      "description": "function isPalindrome(str) { const reversed = str.split('').reverse().join(''); return str === reversed; }"
+      "description": "function isPalindrome(str) { const reversed = str.split('').reverse().join(''); \nreturn str === reversed; }"
     },
     {
       "id": "s2",
