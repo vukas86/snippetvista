@@ -32,7 +32,7 @@ export const AppProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/data.json");
+      const response = await fetch("../../public/data.json");
       let data = await response.json();
 
       for (let category in data) {
